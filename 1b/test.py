@@ -5,7 +5,8 @@ from copy import deepcopy as dp
 from math import e
 
 location,amount,packages,shipperNum = None
-
+VOLUMNE =3
+WEIGHT = 4
 def log(func):
     def inner(*args):
         string =lambda x : "|{:<25}|".format(x) if len(str(x)) < 16 else "|{:<25}|".format(str(x))
@@ -15,7 +16,7 @@ def log(func):
 
 def costCal(begin,package):
     return (
-        5  +package[TSM.VOLUMNE] + package[TSM.WEIGHT]*2
+        5  +package[VOLUMNE] + package[WEIGHT]*2
         - (((begin[1]-package[1])**2 +(begin[2]-package[2])**2 )**(1/2))*1/2 
     ) - (10 if begin[0] == -1 else 0)
 
