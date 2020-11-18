@@ -48,6 +48,7 @@ def solve(n):
                 lst,current = temp,tempFitness
                 #print('change worst')
         T = alpha*T
+        
 def randomIndex(size):
     return int((random()*(size))%size)
 
